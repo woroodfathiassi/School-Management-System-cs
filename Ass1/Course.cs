@@ -12,11 +12,10 @@ namespace Ass1
         private string _CourseName;
         private Teacher _Teacher;
 
-        public Course(int id, string courseName, Teacher teacher)
+        public Course(int id, string courseName)
         {
             _Id = id;
             _CourseName = courseName;
-            _Teacher = teacher;
         }
 
         public int Id

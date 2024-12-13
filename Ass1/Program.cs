@@ -13,8 +13,12 @@ class Program
         Teacher tch1 = new Teacher(1, "Sami", 33);
         Teacher tch2 = new Teacher(2, "Hani", 44);
 
-        Course c1 = new Course(1, "Math", tch1);
-        Course c2 = new Course(2, "Science", tch2);
+        Course c1 = new Course(1, "Math");
+        c1.Teacher = tch1;
+        Course c2 = new Course(2, "Science");
+        c2.Teacher = tch2;
+        Course c3 = new Course(3, "English");
+        c3.Teacher = tch2;
 
         std1.EnrollInCourse(c1);
         std1.EnrollInCourse(c2);
@@ -32,7 +36,8 @@ class Program
         school.AddTeacher(tch2);
 
         school.AddCourse(c1, tch1 );
-        school.AddCourse(c2, tch2);
+        school.AddCourse(c2, tch1);
+        school.AddCourse(c3, tch2);
 
         Console.WriteLine("\nAll studenta in the School:");
         foreach (Student student in school.Students)
